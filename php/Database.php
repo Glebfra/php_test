@@ -23,6 +23,9 @@ class Database
 
         if ($result == false) {
             print("Произошла ошибка при выполнении запроса " . mysqli_error($this->link) . PHP_EOL);
+            return null;
         }
+
+        return $result;
     }
 }
